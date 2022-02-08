@@ -61,3 +61,5 @@ param_grid={'max_iter':max_iter,'solver':solver,'activation':activation,'alpha':
 gridsearch=GridSearchCV(model,param_grid,cv=5)
 
 gridsearch.fit(x_train,y_train)
+
+print("Accuracy with CV : ",metrics.accuracy_score(y_test,ypred))
